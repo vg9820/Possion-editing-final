@@ -20,7 +20,6 @@ in = inpolygon(A,B,targetPosition(:,1),targetPosition(:,2));
 %get these point position
 [x,y] = find(in == 1);
 L0= length(x);
-disp(L0);
 [judge,location] = ismember([x-1,y;x,y-1;x+1,y;x,y+1],[x,y],'row');
 Loc=[[1:L0,1:L0,1:L0,1:L0]',location];
 %% Construct Sparse Matrix A1
